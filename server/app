@@ -1,0 +1,25 @@
+from flask import Flask, request, redirect, jsonify
+import subprocess, sys
+from y_finance import get_stock_price
+app = Flask(__name__)
+
+
+@app.route("/display_stock", methods=['POST'])
+def devices():
+    request_json = request.json
+    stock_ticker = request_json['intent']['params']['company']['original']
+    
+    #subprocess.Popen("C:\\Users\\cc\\y_finance.py", shell=True)
+    result = get_stock_price(stock_ticker)
+    print(result)
+    response = {"stock price" : result
+
+    }
+
+    return jsonify(response)
+app.run()
+
+
+
+
+
