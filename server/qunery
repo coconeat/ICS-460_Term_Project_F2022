@@ -1,0 +1,158 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "3a9705ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{\"stock price\":239.765}\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "import requests\n",
+    "url = 'http://127.0.0.1:5000/display_stock'\n",
+    "myobj = {\n",
+    "\"handler\": {\n",
+    "\"name\": \"price_api\"\n",
+    "},\n",
+    "\"intent\": {\n",
+    "\"name\": \"PRICE\",\n",
+    "\"params\": {\n",
+    "\"company\": {\n",
+    "\"original\": \"Microsoft\",\n",
+    "\"resolved\": \"display Microsoft\"\n",
+    "}\n",
+    "},\n",
+    "\"query\": \"display Microsoft\"\n",
+    "},\n",
+    "\"scene\": {\n",
+    "\"name\": \"company\",\n",
+    "\"slots\": {},\n",
+    "\"next\": {\n",
+    "\"name\": \"actions.scene.END_CONVERSATION\"\n",
+    "},\n",
+    "\"slotFillingStatus\": \"UNSPECIFIED\"\n",
+    "},\n",
+    "\"session\": {\n",
+    "\"id\": \"ABwppHF1Pdbq_VEDQuY7laMPJddVPU4mv_iJx32KgSsmjTkdcF3AeSVCYGZeIscIe3CHrKCeqTzbr-p3olw5QRPg\",\n",
+    "\"params\": {},\n",
+    "\"typeOverrides\": [],\n",
+    "\"languageCode\": \"\"\n",
+    "},\n",
+    "\"user\": {\n",
+    "\"locale\": \"en-US\",\n",
+    "\"params\": {},\n",
+    "\"accountLinkingStatus\": \"ACCOUNT_LINKING_STATUS_UNSPECIFIED\",\n",
+    "\"verificationStatus\": \"VERIFIED\",\n",
+    "\"lastSeenTime\": \"2022-11-26T18:36:46Z\",\n",
+    "\"packageEntitlements\": [],\n",
+    "\"gaiamint\": \"\",\n",
+    "\"permissions\": []\n",
+    "},\n",
+    "\"device\": {\n",
+    "\"capabilities\": [\n",
+    "\"SPEECH\",\n",
+    "\"LONG_FORM_AUDIO\"\n",
+    "],\n",
+    "\"timeZone\": {\n",
+    "\"id\": \"America/Chicago\",\n",
+    "\"version\": \"\"\n",
+    "}\n",
+    "},\n",
+    "\"home\": {\n",
+    "\"params\": {}\n",
+    "}\n",
+    "}\n",
+    "\n",
+    "x = requests.post(url, json = myobj)\n",
+    "\n",
+    "\n",
+    "print(x.text)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "55a647cb",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "31575b07",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d02ee836",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "88a48580",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d5b6dbb5",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3a8e1132",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "47dc9dca",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
